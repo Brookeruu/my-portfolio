@@ -1,6 +1,5 @@
 import React from 'react';
 import ProfileSideBar from './ProfileSideBar';
-import Year from './Year';
 import Header from './Header';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
@@ -24,7 +23,7 @@ function App(){
       <Header />
       <Switch>
         <Route exact path='/' component={ProfileSideBar} />
-        <Route path='/Year' component={Year} />
+        
       </Switch>
     </div>
   );

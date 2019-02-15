@@ -64,63 +64,53 @@ const listForSidebar = [
   }
 ];
 
- 
+
 function ProfileSideBar(props) {
   const { classes } = props;
 
-    return (
-      <div className={classes.root}>
-        <CssBaseline />
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <Typography variant="h6" color="inherit" noWrap>
-              Permanent drawer
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </div>
-  // <div className={classes.root}>
-  //       <CssBaseline />
-  //       <AppBar position="fixed" className={classes.appBar}>
-  // 
-  //       </AppBar>
-  //       <Drawer
-  //         className={classes.drawer}
-  //         variant="permanent"
-  //         classes={{
-  //           paper: classes.drawerPaper,
-  //         }}
-  //         anchor="left"
-  //       >
-  //         <div className={classes.toolbar} />
-  // 
-  //         <List>
-  //           {listForSidebar.map((title, index) => (
-  //             <ListItem  key={index}>
-  //               <ListItemText primary={text} />
-  //             </ListItem>
-  //           ))}
-  //         </List>
-  //         </Drawer>
-  //         </div>
-  //       );
-  //     }
-  // 
-  // 
-  // 
-  // 
-  
-  // 
-  // return(
-  //   <div>
-  //       {listForSidebar.map((title, index) =>
-  //         <ProfileSections
-  //           section={title.section}
-  //           key={index}
-  //           />
-  //         )}
-  //   </div>
+  return (
+     <div className={styles.root}>
+       <Drawer
+         className={styles.drawer}
+         variant="permanent"
+         classes={{
+           paper: styles.drawerPaper,
+         }}
+         anchor="left"
+       >
+         <div className={styles.toolbar} />
+
+         <div>
+               {listForSidebar.map((title, index) =>
+                 <ProfileSections
+                   section={title.section}
+                   key={index}
+                   />
+                 )}
+           </div>
+
+       </Drawer>
+       <main className={classes.content}>
+        <div className={classes.toolbar} />
+        <Typography paragraph>
+          About Me Section
+        </Typography>
+        <Typography paragraph>
+          Portfolio Stuff
+        </Typography>
+      </main>
+
+     </div>
+
   );
 }
 
-export default ProfileSideBar;
+// export default ProfileSideBar;
+
+
+
+ProfileSideBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(ProfileSideBar);
