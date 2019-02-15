@@ -1,5 +1,5 @@
 import React from 'react';
-import Weekday from './Weekday';
+import ProfileSideBar from './ProfileSideBar';
 import Year from './Year';
 import Header from './Header';
 import PropTypes from 'prop-types';
@@ -23,7 +23,7 @@ function App(){
     <div>
       <Header />
       <Switch>
-        <Route exact path='/' component={Weekday} />
+        <Route exact path='/' component={ProfileSideBar} />
         <Route path='/Year' component={Year} />
       </Switch>
     </div>
