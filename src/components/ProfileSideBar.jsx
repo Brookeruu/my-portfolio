@@ -13,7 +13,7 @@ import ListItem from '@material-ui/core/ListItem';
 import { Link } from 'react-router-dom';
 
 
-const drawerWidth = 300;
+const drawerWidth = 360;
 
 const styles = theme => ({
   root: {
@@ -24,8 +24,9 @@ const styles = theme => ({
     marginLeft: drawerWidth,
   },
   drawer: {
-    width: '240px',
+    width: '360',
     flexShrink: 0,
+    backgroundColor: '#58A4B0'
 
   },
   drawerPaper: {
@@ -35,13 +36,15 @@ const styles = theme => ({
     alignItems: 'center',
     texAlign: 'center',
     paddingLeft: '20px',
+    backgroundColor: '#DDECEF'
   },
   toolbar: theme.mixins.toolbar,
   content: {
-    marginLeft: `300px`,
-    position: 'absolute',
+    marginLeft: '360px',
+    height: '100%',
     flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: '#FDFDFD',
+    // backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
   },
 });
@@ -49,16 +52,10 @@ const styles = theme => ({
 
 const listForSidebar = [
   {
-    section: "Brooke Perry"
+   section: "Frontend Web Developer"
   },
   {
-    section: "Frontend Web Developer"
-  },
-  {
-    section: "Home"
-  },
-  {
-    section: "About"
+    section: "ABOUT"
   },
   {
     section: "Portfolio"
@@ -89,6 +86,12 @@ function ProfileSideBar(props) {
          anchor="left"
        >
          <div >
+         <h1
+         style={{
+           color: '#373F51',
+           fontSize: '50px'
+         }}
+         >Brooke Perry</h1>
                {listForSidebar.map((title, index) =>
                  <ProfileSections
                    section={title.section}

@@ -23,7 +23,7 @@ function App(){
       <Header />
       <Switch>
         <Route exact path='/' component={ProfileSideBar} />
-        
+
       </Switch>
     </div>
   );

@@ -4,16 +4,19 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 
+
+const letterStyle = {
+  color: '#373F51',
+  letterSpacing: '3px'
+}
+
 function ProfileSections(props) {
-  let testCSS = {
-    color: 'seaGreen'
-  }
   return(
-    <h2 style={testCSS} elevation={1} >
-      <Typography>
+    <h1 style={letterStyle} elevation={1} >
+      <Typography style={letterStyle}>
         {props.section}
       </Typography>
-    </h2>
+    </h1>
   );
 }
 
