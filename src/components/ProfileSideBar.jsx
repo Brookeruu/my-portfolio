@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 
-const drawerWidth = 500;
+const drawerWidth = 240;
 
 const styles = theme => ({
   root: {
@@ -69,12 +69,12 @@ function ProfileSideBar(props) {
   const { classes } = props;
 
   return (
-     <div className={styles.root}>
+     <div className={classes.root}>
        <Drawer
-         className={styles.drawer}
+         className={classes.drawer}
          variant="permanent"
          classes={{
-           paper: styles.drawerPaper,
+           paper: classes.drawerPaper,
          }}
          anchor="left"
        >
@@ -102,10 +102,6 @@ function ProfileSideBar(props) {
 
   );
 }
-
-// export default ProfileSideBar;
-
-
 
 ProfileSideBar.propTypes = {
   classes: PropTypes.object.isRequired,
