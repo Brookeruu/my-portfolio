@@ -1,14 +1,14 @@
 {
-  "name": "farmersmarket",
+  "name": "myportfolio",
   "version": "1.0.0",
-  "description": "app for farmers market",
+  "description": "app for my portfolio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "lint": "eslint src/** src/**/**; exit 0"
   },
-  "author": "paige williams && chris cahill",
+  "author": "Brooke Perry",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
@@ -32,5 +32,17 @@
     "react-hot-loader": "^3.0.0-beta.7",
     "webpack": "^3.4.0",
     "webpack-dev-server": "^2.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brookeruu/my-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "react"
+  ],
+  "bugs": {
+    "url": "https://github.com/Brookeruu/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/Brookeruu/my-portfolio#readme"
 }
