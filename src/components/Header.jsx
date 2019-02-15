@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 function Header(){
   return (
     <div>
-    <div style={{marginLeft: '240px'}}>
+    <div style={{
+      marginLeft: '300px',
+      paddingLeft: '40px'
+      }}>
 
-      <Link to="/">ProfileSideBarlink</Link> | <Link to="/Year">Month by month avails</Link>
+    
     </div>
     </div>
   );

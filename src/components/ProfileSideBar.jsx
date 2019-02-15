@@ -10,8 +10,10 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
+import { Link } from 'react-router-dom';
 
-const drawerWidth = 240;
+
+const drawerWidth = 300;
 
 const styles = theme => ({
   root: {
@@ -24,12 +26,20 @@ const styles = theme => ({
   drawer: {
     width: '240px',
     flexShrink: 0,
+
   },
   drawerPaper: {
     width: drawerWidth,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    texAlign: 'center',
+    paddingLeft: '20px',
   },
   toolbar: theme.mixins.toolbar,
   content: {
+    marginLeft: `300px`,
+    position: 'absolute',
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
@@ -96,6 +106,7 @@ function ProfileSideBar(props) {
         <Typography paragraph>
           Portfolio Stuff
         </Typography>
+        <Link to="/">ProfileSideBarlink</Link> | <Link to="/Year">Month by month avails</Link>
       </main>
 
      </div>
