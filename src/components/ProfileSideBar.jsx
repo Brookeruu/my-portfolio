@@ -1,45 +1,49 @@
 import React from 'react';
+import ProfileSections from './ProfileSections';
 import PropTypes from 'prop-types';
 
 const listForSidebar = [
   {
-    title: "Brooke Perry"
+    section: "Brooke Perry"
   },
   {
-    title: "Frontend Web Developer"
+    section: "Frontend Web Developer"
   },
   {
-    title: "Home"
+    section: "Home"
   },
   {
-    title: "About"
+    section: "About"
   },
   {
-    title: "Portfolio"
+    section: "Portfolio"
   },
   {
-    title: "Skills"
+    section: "Skills"
   },
   {
-    title: "Experience"
+    section: "Experience"
   },
   {
-    title: "Contact"
+    section: "Contact"
   }
-]
+];
 
-
+ 
 function ProfileSideBar(props) {
-  return (
+
+
+  return(
     <div>
-      <p>This will be where the profile side bar goes!</p>
+      <p>testing</p>
+        {listForSidebar.map((title, index) =>
+          <ProfileSections
+            section={title.section}
+            key={index}
+            />
+          )}
     </div>
-  )
+  );
 }
-
-ProfileSideBar.protoTypes = {
-  title: PropTypes.string.isRequired
-};
-
 
 export default ProfileSideBar;
