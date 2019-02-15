@@ -4,6 +4,10 @@
 
 Creating a React App to host my Portfolio.
 
+## Component Structure 
+
+![component structure](./src/assets/component-structure.10.03 AM.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
