@@ -9,11 +9,11 @@ function ProfileSections(props) {
     color: 'seaGreen'
   }
   return(
-    <Paper style={testCSS} elevation={1} >
-      <Typography variant="h5">
+    <h2 style={testCSS} elevation={1} >
+      <Typography>
         {props.section}
       </Typography>
-    </Paper>
+    </h2>
   );
 }
 
