@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 
-const drawerWidth = 240;
+const drawerWidth = 500;
 
 const styles = theme => ({
   root: {
@@ -22,7 +22,7 @@ const styles = theme => ({
     marginLeft: drawerWidth,
   },
   drawer: {
-    width: drawerWidth,
+    width: '240px',
     flexShrink: 0,
   },
   drawerPaper: {
@@ -78,9 +78,7 @@ function ProfileSideBar(props) {
          }}
          anchor="left"
        >
-         <div className={styles.toolbar} />
-
-         <div>
+         <div >
                {listForSidebar.map((title, index) =>
                  <ProfileSections
                    section={title.section}
