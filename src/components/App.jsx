@@ -4,9 +4,6 @@ import Header from './Header';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 import { Switch, Route } from 'react-router-dom';
-// import './App.css';
-
-
 
 const theme = createMuiTheme({
   palette: {

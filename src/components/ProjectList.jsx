@@ -12,7 +12,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import Projects from './Projects';
 import { Link } from 'react-router-dom';
-import CharityFrogImg from '/Users/brookeperry/desktop/Devs/react/my-portfolio/src/assets/charityFrog.png';
+
 
 const masterListProjects = [
   {
@@ -23,7 +23,7 @@ const masterListProjects = [
   },
   {
     title: 'Example #2',
-    image: '../assests/charityFrog.png',
+    image: ' ',
     technologies: 'Angular',
     brief: "Waste less food, search recipes that use ingredients you already have."
   }

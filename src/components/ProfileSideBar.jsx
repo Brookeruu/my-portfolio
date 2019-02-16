@@ -114,7 +114,7 @@ function ProfileSideBar(props) {
         <Typography paragraph>
           Portfolio Stuff
         </Typography>
-        <Link to="/">ProfileSideBarlink</Link> | <Link to="/Year">Month by month avails</Link>
+        <Link to="/">ProfileSideBarlink</Link> 
         <ProjectList />
       </main>
      </div>

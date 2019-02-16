@@ -32,10 +32,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: [/\.jsx?$/, /\.css$/],
-        loader: "[babel-loader",'to-string-loader', 'css-loader'],
+        test: /\.jsx?$/,
+        loader: "babel-loader",
         exclude: /node_modules/,
-        // use: ['to-string-loader', 'css-loader'],
         options: {
           presets: [
             ["es2015", {"modules": false}],
