@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography';
 
 
 const letterStyle = {
-  color: '#373F51',
-  letterSpacing: '3px'
+  color: '#69626D',
+  letterSpacing: '5px'
 }
 
 function ProfileSections(props) {

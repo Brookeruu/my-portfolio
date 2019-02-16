@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import { Link } from 'react-router-dom';
+import ProjectList from './ProjectList';
 
 
 const drawerWidth = 360;
@@ -26,7 +27,7 @@ const styles = theme => ({
   drawer: {
     width: '360',
     flexShrink: 0,
-    backgroundColor: '#58A4B0'
+    backgroundColor: '#DDDFE1'
 
   },
   drawerPaper: {
@@ -36,7 +37,7 @@ const styles = theme => ({
     alignItems: 'center',
     texAlign: 'center',
     paddingLeft: '20px',
-    backgroundColor: '#DDECEF'
+    backgroundColor: '#DDDFE1'
   },
   toolbar: theme.mixins.toolbar,
   content: {
@@ -46,6 +47,7 @@ const styles = theme => ({
     backgroundColor: '#FDFDFD',
     // backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
+    padding: '100px'
   },
 });
 
@@ -55,7 +57,7 @@ const listForSidebar = [
    section: "Frontend Web Developer"
   },
   {
-    section: "ABOUT"
+    section: "About"
   },
   {
     section: "Portfolio"
@@ -89,7 +91,8 @@ function ProfileSideBar(props) {
          <h1
          style={{
            color: '#373F51',
-           fontSize: '50px'
+           fontSize: '50px',
+           fontFamily: 'Roboto'
          }}
          >Brooke Perry</h1>
                {listForSidebar.map((title, index) =>
@@ -105,13 +108,15 @@ function ProfileSideBar(props) {
         <div className={classes.toolbar} />
         <Typography paragraph>
           About Me Section
+          Honing in on my skills as a web developer after years of working in Education Administration. Finding ways to combine my experience and passion for international language with programming languages.
+
         </Typography>
         <Typography paragraph>
           Portfolio Stuff
         </Typography>
         <Link to="/">ProfileSideBarlink</Link> | <Link to="/Year">Month by month avails</Link>
+        <ProjectList />
       </main>
-
      </div>
 
   );
