@@ -1,12 +1,12 @@
 ## My Portfolio
 
-#### By Brooke Perry 
+#### By Brooke Perry
 
 Creating a React App to host my Portfolio.
 
-## Component Structure 
+## Component Structure
 
-![component structure](./src/assets/component-structure.10.03 AM.png)
+![component structure](./src/assets/component-structure.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
