@@ -53,8 +53,7 @@ function ProjectList(props) {
 
             <img className={images} src={charityFrogImg}
             style={{
-              height: '450px',
-              width: '650px'
+              width: '800px'
             }}></img>
           </div>
 

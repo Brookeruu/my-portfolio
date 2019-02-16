@@ -39,11 +39,13 @@ const styles = theme => ({
     marginLeft: '360px',
     height: '100%',
     width: '100%',
+    maxWidth: '1200px',
     flexGrow: 1,
     backgroundColor: '#FDFDFD',
     marginTop: '0',
-    padding: theme.spacing.unit * 3,
-    paddingTop: '0'
+    // padding: theme.spacing.unit * 3,
+    paddingTop: '0',
+
     // backgroundColor: theme.palette.background.default,
     // padding: theme.spacing.unit * 3,
     // padding: '100px'
@@ -75,8 +77,7 @@ const listForSidebar = [
 const succulentImage = {
   resizeMode: 'cover',
   maxWidth: '1200px',
-  overflow: 'visible',
-  
+  overflow: 'visible'
 }
 
 
