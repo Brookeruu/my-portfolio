@@ -32,9 +32,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        loader: "babel-loader",
+        test: [/\.jsx?$/, /\.css$/],
+        loader: "[babel-loader",'to-string-loader', 'css-loader'],
         exclude: /node_modules/,
+        // use: ['to-string-loader', 'css-loader'],
         options: {
           presets: [
             ["es2015", {"modules": false}],
@@ -44,7 +45,7 @@ module.exports = {
             "react-hot-loader/babel",
             "styled-jsx/babel"
           ]
-        }
+        },
       }
     ],
   },
