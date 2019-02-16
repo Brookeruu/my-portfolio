@@ -12,12 +12,12 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import Projects from './Projects';
 import { Link } from 'react-router-dom';
-
+import charityFrogImg from '../assets/images/charityFrog.png';
 
 const masterListProjects = [
   {
     title: 'Charity Frog',
-    image: '../assests/charityFrog.png',
+    image: 'src={charityFrog}',
     technologies: 'Ruby / Rails',
     brief: "Nonprofit donation site for Portland"
   },
@@ -37,14 +37,25 @@ const projectsGrid = {
   justifyContent: 'center'
 }
 
-function ProjectList() {
+const images = {
+  height: '200px',
+  width: '400px'
+}
+
+function ProjectList(props) {
+
+    const { classes } = props;
 
     return(
       <div>
         <p>Project List is working</p>
         <div style={projectsGrid}>
 
-            <img src="CharityFrogImg"></img>
+            <img className={images} src={charityFrogImg}
+            style={{
+              height: '450px',
+              width: '650px'
+            }}></img>
           </div>
 
       </div>

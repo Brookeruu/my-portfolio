@@ -12,6 +12,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import { Link } from 'react-router-dom';
 import ProjectList from './ProjectList';
+import succulents from '../assets/images/succulents.jpg';
 
 
 const drawerWidth = 360;
@@ -20,15 +21,9 @@ const styles = theme => ({
   root: {
     display: 'flex',
   },
-  appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-  },
   drawer: {
     width: '360',
-    flexShrink: 0,
-    backgroundColor: '#DDDFE1'
-
+    flexShrink: 0
   },
   drawerPaper: {
     width: drawerWidth,
@@ -37,17 +32,21 @@ const styles = theme => ({
     alignItems: 'center',
     texAlign: 'center',
     paddingLeft: '20px',
-    backgroundColor: '#DDDFE1'
+    backgroundColor: '#F1F0F1'
   },
   toolbar: theme.mixins.toolbar,
   content: {
     marginLeft: '360px',
     height: '100%',
+    width: '100%',
     flexGrow: 1,
     backgroundColor: '#FDFDFD',
-    // backgroundColor: theme.palette.background.default,
+    marginTop: '0',
     padding: theme.spacing.unit * 3,
-    padding: '100px'
+    paddingTop: '0'
+    // backgroundColor: theme.palette.background.default,
+    // padding: theme.spacing.unit * 3,
+    // padding: '100px'
   },
 });
 
@@ -73,8 +72,16 @@ const listForSidebar = [
   }
 ];
 
+const succulentImage = {
+  resizeMode: 'cover',
+  maxWidth: '1200px',
+  overflow: 'visible',
+  
+}
+
 
 function ProfileSideBar(props) {
+
   const { classes } = props;
 
   return (
@@ -85,37 +92,44 @@ function ProfileSideBar(props) {
          classes={{
            paper: classes.drawerPaper,
          }}
-         anchor="left"
-       >
+         anchor="left">
+
          <div >
-         <h1
-         style={{
-           color: '#373F51',
-           fontSize: '50px',
-           fontFamily: 'Roboto'
-         }}
-         >Brooke Perry</h1>
-               {listForSidebar.map((title, index) =>
-                 <ProfileSections
-                   section={title.section}
-                   key={index}
-                   />
-                 )}
+           <h1
+           style={{
+             color: '#373F51',
+             fontSize: '50px',
+             fontFamily: 'Roboto'
+           }}>
+           Brooke Perry
+           </h1>
+           {listForSidebar.map((title, index) =>
+             <ProfileSections
+               section={title.section}
+               key={index}
+               />
+             )}
            </div>
+         </Drawer>
 
-       </Drawer>
        <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Typography paragraph>
-          About Me Section
-          Honing in on my skills as a web developer after years of working in Education Administration. Finding ways to combine my experience and passion for international language with programming languages.
 
-        </Typography>
-        <Typography paragraph>
-          Portfolio Stuff
-        </Typography>
-        <Link to="/">ProfileSideBarlink</Link> 
-        <ProjectList />
+       <img style={succulentImage} src={succulents} alt="succulents"></img>
+
+       <div style={{margin: '100px'}}>
+        <div className={classes.toolbar} />
+
+          <Typography paragraph>
+            About Me Section
+            Honing in on my skills as a web developer after years of working in Education Administration. Finding ways to combine my experience and passion for international language with programming languages.
+          </Typography>
+
+          <Typography paragraph>
+            Portfolio Stuff
+          </Typography>
+          <Link to="/">ProfileSideBarlink</Link>
+          <ProjectList />
+        </div>
       </main>
      </div>
 
