@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import charityFrogImg from '../assets/images/charityFrog.png';
-import foorSavor from '../assets/images/foodSavor.png';
+import foodSavor from '../assets/images/foodSavor.png';
 
 const styles = theme => ({
   root: {
@@ -15,15 +15,21 @@ const styles = theme => ({
     height: 240,
   },
   paper: {
-    padding: theme.spacing.unit * 2,
+    // padding: theme.spacing.unit * 2,
     height: '100%',
-    color: theme.palette.text.secondary,
+    // color: theme.palette.text.secondary,
   },
   control: {
     padding: theme.spacing.unit * 6,
-    margin: '5px'
+    boxShadow: 'none',
+    backgroundColor: '#FDFDFD'
   },
 });
+
+const images = {
+  height: '200px',
+  width: '400px'
+}
 
 class ProjectList2 extends React.Component {
   constructor(props) {
@@ -52,6 +58,11 @@ class ProjectList2 extends React.Component {
           <Paper className={classes.control}>
             <Grid container spacing={24}>
               <Grid item xs={12}>
+              <img className={images} src={foodSavor}
+              style={{
+                width: '100%'
+              }}></img>
+
 
               </Grid>
             </Grid>
@@ -61,6 +72,11 @@ class ProjectList2 extends React.Component {
           <Paper className={classes.control}>
             <Grid container spacing={24}>
               <Grid item xs={12}>
+
+              <img className={images} src={charityFrogImg}
+              style={{
+                width: '100%'
+              }}></img>
 
               </Grid>
             </Grid>

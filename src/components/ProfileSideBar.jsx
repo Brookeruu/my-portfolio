@@ -130,7 +130,7 @@ function ProfileSideBar(props) {
             Portfolio Stuff
           </Typography>
           <Link to="/">ProfileSideBarlink</Link>
-          <ProjectList />
+
           <ProjectList2 />
         </div>
       </main>
