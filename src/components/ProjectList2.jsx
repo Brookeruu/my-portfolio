@@ -3,6 +3,7 @@ import ProfileSections from './ProfileSections';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import charityFrogImg from '../assets/images/charityFrog.png';
 import foorSavor from '../assets/images/foodSavor.png';
 
@@ -14,67 +15,39 @@ const styles = theme => ({
     height: 240,
   },
   paper: {
-    padding: theme.spacing.unit * 4,
+    padding: theme.spacing.unit * 2,
     height: '100%',
     color: theme.palette.text.secondary,
   },
   control: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * 6,
+    margin: '5px'
   },
 });
 
-class InteractiveGrid extends React.Component {
-  state = {
-    direction: 'column',
-    justify: 'center',
-    alignItems: 'center',
-    gridGap: '20'
-  };
+class ProjectList2 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        direction: 'column',
+        justify: 'center',
+        alignItems: 'center'
+      };
 
-  handleChange = key => (event, value) => {
-    this.setState({
-      [key]: value,
-    });
-  };
+    this.handleChange = key => (event, value) => {
+      this.setState({
+        [key]: value,
+      });
+    };
+  }
 
   render() {
     const { classes } = this.props;
     const { alignItems, direction, justify } = this.state;
 
-    const code = `
-\`\`\`jsx
-<Grid
-  container
-  direction="${direction}"
-  justify="${justify}"
-  alignItems="${alignItems}"
->
-\`\`\`
-`;
-
     return (
       <Grid container className={classes.root}>
-        <Grid item xs={12}>
-          <Grid
-            container
-            spacing={40}
-            className={classes.demo}
-            alignItems={alignItems}
-            direction={direction}
-            justify={justify}
-          >
-            {[0, 1, 2].map(value => (
-              <Grid key={value} item>
-                <Paper
-                  className={classes.paper}
-                  style={{ paddingTop: (value + 1) * 10, paddingBottom: (value + 1) * 10 }}
-                >
-                  {`Cell ${value + 3}`}
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
+
         <Grid item xs={12}>
           <Paper className={classes.control}>
             <Grid container spacing={24}>
@@ -85,15 +58,21 @@ class InteractiveGrid extends React.Component {
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <MarkdownElement text={code} />
+          <Paper className={classes.control}>
+            <Grid container spacing={24}>
+              <Grid item xs={12}>
+
+              </Grid>
+            </Grid>
+          </Paper>
         </Grid>
       </Grid>
     );
   }
 }
 
-InteractiveGrid.propTypes = {
+ProjectList2.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(InteractiveGrid);
+export default withStyles(styles)(ProjectList2);

@@ -12,6 +12,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import { Link } from 'react-router-dom';
 import ProjectList from './ProjectList';
+import ProjectList2 from './ProjectList2';
 import succulents from '../assets/images/succulents.jpg';
 
 
@@ -130,6 +131,7 @@ function ProfileSideBar(props) {
           </Typography>
           <Link to="/">ProfileSideBarlink</Link>
           <ProjectList />
+          <ProjectList2 />
         </div>
       </main>
      </div>
