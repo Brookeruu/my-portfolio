@@ -42,9 +42,39 @@ const images = {
   width: '400px'
 }
 
-function ProjectList(props) {
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  demo: {
+    height: 240,
+  },
+  paper: {
+    padding: theme.spacing.unit * 4,
+    height: '100%',
+    color: theme.palette.text.secondary,
+  },
+  control: {
+    padding: theme.spacing.unit * 2,
+  },
+});
 
-    const { classes } = props;
+class ProjectList extends React.Component {
+  state = {
+    direction: 'column',
+    justify: 'center',
+    alignItems: 'center',
+    gridGap: '20'
+  };
+
+  handleChange = key => (event, value) => {
+    this.setState({
+      [key]: value,
+    });
+  };
+
+
+render() {
 
     return(
       <div>
@@ -59,7 +89,7 @@ function ProjectList(props) {
 
       </div>
     )
-
+  }
   }
 
 export default ProjectList;

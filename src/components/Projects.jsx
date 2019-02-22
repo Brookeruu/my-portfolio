@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
 const projectLetterStyle = {
   color: 'green'
@@ -19,7 +20,7 @@ function Projects(props) {
 
   return(
     <div style={projectLetterStyle} elevation={1}>
-      <p>Project List is working</p>
+      <p>Project List will go here?</p>
       <Typography style={projectLetterStyle}>
 
       </Typography>
