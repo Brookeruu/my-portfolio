@@ -8,6 +8,8 @@ import AboutMe from './AboutMe';
 import charityFrogImg from '../assets/images/charityFrog.png';
 import foodSavor from '../assets/images/foodSavor.png';
 import carbonFootprint from '../assets/images/carbonFootprint.png';
+import galactic from '../assets/images/galacticCalc.png';
+import findDoc from '../assets/images/findDoc.png';
 
 
 const styles = theme => ({
@@ -40,7 +42,8 @@ class ProjectList2 extends React.Component {
     this.state = {
         direction: 'column',
         justify: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        isHovered: false
       };
 
     this.handleChange = key => (event, value) => {
@@ -91,6 +94,24 @@ class ProjectList2 extends React.Component {
               style={{
                 width: '100%'
               }}></img>
+
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Paper className={classes.control}>
+            <Grid container spacing={24}>
+              <Grid item xs={12}>
+              <div>
+
+
+                <img className={images} src={galactic}
+                style={{
+                  width: '100%'
+                }}></img>
+              </div>
 
               </Grid>
             </Grid>

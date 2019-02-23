@@ -57,7 +57,7 @@ const styles = theme => ({
 
 const listForSidebar = [
   {
-   section: "Frontend Web Developer"
+   section: "Full Stack Web Developer"
   },
   {
     section: "About"
@@ -98,15 +98,19 @@ function ProfileSideBar(props) {
          anchor="left">
 
          <div >
+           <div>
+           <img  src={brooke2}
+           style={{
+             width: '200px',
+             borderRadius: '50%',
+             alignItems: 'center',
+             display: 'block',
+             marginLeft: 'auto',
+             marginRight: 'auto',
+             justify: 'center'
+           }}></img>
+           </div>
 
-         <img  src={brooke2}
-         style={{
-           width: '200px',
-           // height: '400px',
-           borderRadius: '50%',
-           alignItems: 'center',
-           justify: 'center'
-         }}></img>
            <h1
            style={{
              color: '#373F51',
