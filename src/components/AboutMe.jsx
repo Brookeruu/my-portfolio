@@ -1,18 +1,12 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import me from '../assets/images/me.jpg';
+
+
 export default function AboutMe() {
 
   return(
     <div>
 
-    <img  src={me}
-    style={{
-      width: '30%',
-      borderRadius: '70%',
-      alignItems: 'center',
-      justify: 'center'
-    }}></img>
       <h2>About me...</h2>
       <Typography paragraph>
         About Me Section

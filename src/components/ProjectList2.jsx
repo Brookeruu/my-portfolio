@@ -7,6 +7,8 @@ import Paper from '@material-ui/core/Paper';
 import AboutMe from './AboutMe';
 import charityFrogImg from '../assets/images/charityFrog.png';
 import foodSavor from '../assets/images/foodSavor.png';
+import carbonFootprint from '../assets/images/carbonFootprint.png';
+
 
 const styles = theme => ({
   root: {
@@ -59,7 +61,9 @@ class ProjectList2 extends React.Component {
           <Paper className={classes.control}>
             <Grid container spacing={24}>
               <Grid item xs={12}>
+
               <AboutMe />
+
               </Grid>
             </Grid>
           </Paper>
@@ -92,7 +96,25 @@ class ProjectList2 extends React.Component {
             </Grid>
           </Paper>
         </Grid>
+
+        <Grid item xs={12}>
+          <Paper className={classes.control}>
+            <Grid container spacing={24}>
+              <Grid item xs={12}>
+
+              <img className={images} src={carbonFootprint}
+              style={{
+                width: '100%'
+              }}></img>
+
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+
       </Grid>
+
+
     );
   }
 }

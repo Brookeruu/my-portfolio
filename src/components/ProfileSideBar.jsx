@@ -13,6 +13,7 @@ import ListItem from '@material-ui/core/ListItem';
 import { Link } from 'react-router-dom';
 import ProjectList from './ProjectList';
 import ProjectList2 from './ProjectList2';
+import brooke2 from '../assets/images/squareProfile.png';
 import succulents from '../assets/images/succulents.jpg';
 
 
@@ -97,6 +98,15 @@ function ProfileSideBar(props) {
          anchor="left">
 
          <div >
+
+         <img  src={brooke2}
+         style={{
+           width: '200px',
+           // height: '400px',
+           borderRadius: '50%',
+           alignItems: 'center',
+           justify: 'center'
+         }}></img>
            <h1
            style={{
              color: '#373F51',
